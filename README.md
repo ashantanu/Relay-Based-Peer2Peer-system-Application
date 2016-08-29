@@ -23,8 +23,23 @@ negotiation phase, the TCP connection on both sides should be closed gracefully 
 resource. You should accept the IP Address and Port number from the command line (Don't use a hard-
 coded port number). Prototype for command line is as follows:
 
-**Prototypes for Client and Server**
-
-**Client:** <executable code><Server IP Address><Server Port number>
-
+**Prototypes for Client and Server**  
+**Client:** <executable code><Server IP Address><Server Port number>  
 **Server:** <executable code><Server Port number>
+
+
+## How to use this
+1. compile the three codes  
+	 c++ -o server server.c  
+	 c++ -o client client.c  
+	 c++ -o node node.c  
+     (the nodes can be in other directories as well, it doesn't matter.)
+2. run 
+    /server <serverport>  
+    /node <serveraddress> <serverport>  
+	/node <serveraddress> <serverport>  
+	/node <serveraddress> <serverport>  
+	/client <serveraddress> <serverport>   
+	server address is localhost here
+3. The requested file should be with a node. The client will ask for a file name and return the file if it is found with any node.
+
